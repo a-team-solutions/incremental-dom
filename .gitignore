@@ -1,6 +1,5 @@
 node_modules/
-dist/
+dist/node/
+dist/web/
 build/
-coverage/
-bazel-*
 .DS_Store
