@@ -21,7 +21,7 @@ pages:
     - ls -lah
     - npm install
     - npm run dist
-    - cp -r dist/ public/
+    - npx cpx 'dist/**/' 'public/' -u -v
     artifacts:
         paths:
         - public
