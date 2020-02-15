@@ -65,7 +65,11 @@ function applyAttr(el: Element, name: string, value: unknown) {
  * @param value The property's value.
  */
 function applyProp(el: Element, name: string, value: unknown) {
-  (el as any)[name] = value;
+  if (value instanceof Boolean) {
+    (el[name] as any) = value == true;
+  } else {
+    (el[name] as any) = value;
+  }
 }
 
 /**
@@ -133,6 +137,11 @@ function applyAttributeTyped(el: Element, name: string, value: unknown) {
   const type = typeof value;
 
   if (type === "object" || type === "function") {
+    if (value instanceof Boolean) {
+        applyAttr(el, name, value == true ? "" : null);
+    } else {
+        applyAttr(el, name, value);
+    }
     applyProp(el, name, value);
   } else {
     applyAttr(el, name, value);
