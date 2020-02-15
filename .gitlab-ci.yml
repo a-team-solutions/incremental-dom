@@ -21,9 +21,8 @@ pages:
     - ls -lah
     - npm install
     - npm run dist
-    - cp -r ./dist ../public
     artifacts:
         paths:
-        - public
+        - dist
     only:
     - dev
