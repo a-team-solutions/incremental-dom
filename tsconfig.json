@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "genfiles",
+    "outDir": "dist/",
     "allowSyntheticDefaultImports": false,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noEmitOnError": true,
@@ -13,16 +11,12 @@
     "noImplicitReturns": true,
     "pretty": true,
     "strict": true,
-    "module": "commonjs",
     "target": "es5",
-    "lib": ["es2015", "dom"],
-    "sourceMap": true
+    "lib": ["es2015", "dom"]
   },
   "include": [
     "index.ts",
-    "src/*.ts",
-    "test/*.ts",
-    "test/**/*.ts"
+    "src/*.ts"
   ],
   "exclude": [
     "node_modules"

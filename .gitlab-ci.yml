@@ -20,7 +20,7 @@ pages:
     - pwd
     - ls -lah
     - npm install
-    - npm run build
+    - npm run dist
     - cp -r ./dist ../public
     artifacts:
         paths:
