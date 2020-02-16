@@ -8,8 +8,8 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
-            },
-        ],
+            }
+        ]
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
@@ -17,5 +17,6 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist', 'web'),
+        library: 'IncrementalDOM'
     },
 };

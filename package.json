@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "dist": "npm run clean && npm run build:node && npm run build:web && npm run build:web-min",
-    "clean": "rm -rf dist/",
+    "clean": "rm -rf dist/web && rm -rf dist/node",
     "update": "npm-check -u",
     "build:node": "tsc --project ./tsconfig.build.json",
     "build:web": "webpack --mode=development --output-filename='incremental-dom.js'",
